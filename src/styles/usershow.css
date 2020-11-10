@@ -1,0 +1,23 @@
+.sidebar_style{
+    position: flex;
+    margin: 30px 30px;
+    border-radius: 25px;
+    background: #4351C8;
+    padding: 20px;
+    align-items: center;
+    height: 100%;
+    vertical-align: middle;
+    
+}
+
+.Link{
+    text-decoration: none;
+}
+.nav_display{
+    position: flex;
+    margin: 10px 10px 20px;
+    background: #fff;
+    border-radius: 15px;
+
+
+}

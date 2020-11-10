@@ -1,0 +1,10 @@
+.coming-soon{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 100vw;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
