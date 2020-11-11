@@ -1,10 +1,12 @@
-.coming-soon{
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    height: 100vw;
-    background-color: #fff;
+.coming_soon{
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    color: #EEEEEE;
+    padding-top: 20%;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: middle;
 }

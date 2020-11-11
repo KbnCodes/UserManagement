@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/card.css";
+import {Box} from '@material-ui/core'
 import axios from "axios";
 import { Link } from "react-router-dom";
 // import { Scrollbars } from 'react-custom-scrollbars'
@@ -17,6 +18,7 @@ import {
 
 function UserAccountCard() {
   //create hooks for storing user accounts
+  //using only get method so no need to create state store data
   const [users, setUser] = useState([]);
 
   //To execute loadusers() 
@@ -30,26 +32,25 @@ function UserAccountCard() {
     setUser(result.data);
   };
   return (
-    <div>
-        <Card className="card_style" style={{marginTop:"auto", marginBottom:"auto" }}>
+    <Box borderRadius="16%">
+        <Card className="card_style" style={{  marginTop:"40px" , marginLeft:"auto", marginRight:"auto"}}>
           <CardContent>
-            <Typography variant="h4">
-              Select an acc
+            <Typography variant="h6" align="center">
+              Select an account
             </Typography>
           {/* <Scrollbars style={{width:300}}> */}
-          <Paper style={{maxHeight:300 , overflow:'auto'}}>
+          <Paper style={{maxHeight:450 , overflow:'auto'}}>
             {users.map((user) => {
               return (
                 <>
-                  <Link className="text_style" to={`/users/${user.id}`}>
+                  <Link className="text_style" to={`/users/profile/${user.id}`}>
                     <ListItem key={user.id}>
                       <ListItemAvatar>
-                        <Avatar alt={user.name} src={user.profilepicture} />
+                        <Avatar alt={user.name} src={user.profilepicture} className="classes.small" />
                       </ListItemAvatar>
                       <ListItemText id={user.id} primary={user.name} />
                     </ListItem>
                   </Link>
-
                   <Divider />
                 </>
               );
@@ -58,7 +59,7 @@ function UserAccountCard() {
             {/* </Scrollbars> */}
           </CardContent>
         </Card>
-      </div>
+      </Box>
     
   );
 };

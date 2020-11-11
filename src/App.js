@@ -9,7 +9,10 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/users/:id" component={UserShow}/>
+        <Route exact path="/users/profile/:id" component={UserShow}/>
+        <Route path="/users/post/:id"component={UserShow}/>
+        <Route path="/users/gallery/:id"component={UserShow}/>
+        <Route path="/users/todo/:id"component={UserShow}/>
       </Switch>
 
       {/* <UserShow/> */}

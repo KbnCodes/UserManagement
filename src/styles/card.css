@@ -3,20 +3,28 @@
     text-decoration: none;
 }
 .card_style{
-    width: 50%;
-    height: 60vh;
-    box-shadow: 5px 5px 25px -5px, rgba(0,0,0,0.5);
-    border-radius: 30px;
+    width: 40%;
     justify-content: center;
     align-items: center;
 }
+.box_style{
+    box-shadow: 10px 10px 25px -5px, rgba(24, 17, 17, 0.5);
+    border-radius: 30px;
 
+}
 .cardMedia{
     padding-top:'81.25%';
     border-radius:'50%';
     margin:'28px';
 }
+.card_heading{
+    background-color: #F6F6F6;
+}
 .scroll{
     max-height: 300;
     overflow: 'auto';
+}
+.profile_style{
+    padding: 40px 5px 30px;
+    font-size: 5rem;
 }
