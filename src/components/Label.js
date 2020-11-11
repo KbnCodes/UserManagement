@@ -11,3 +11,5 @@ export default function Label({ user, label }) {
     </Box>
   );
 }
+
+//this component is used to get typography data through props and it will return to comonent

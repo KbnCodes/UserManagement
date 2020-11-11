@@ -15,6 +15,7 @@ export default function App() {
     loadUser();
   }, []);
 
+//   created a function that helps to redirect to home page when user clicks on sign out
   const redirect = () => {
     history.push("/");
   };

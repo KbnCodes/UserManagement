@@ -1,16 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Divider,
-  Grid,
-  List,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  IconButton,
-  Avatar,
-  Typography,
-  Box,
-} from "@material-ui/core";
+import { Divider, Grid, Avatar, Typography, Box } from "@material-ui/core";
 import ProfileView from "../components/ProfileView";
 import Label from "./Label";
 import LabelCompany from "./LabelCompany";
@@ -19,10 +8,11 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 function Profile() {
+  //hook state
   const [user, setUser] = useState({});
-
+  //accessing params
   const { id } = useParams();
-
+  
   useEffect(() => {
     loadUser();
   }, []);
@@ -38,7 +28,7 @@ function Profile() {
           <Typography>Profile</Typography>
         </Grid>
         <Grid item xs={6}>
-          <ProfileView   style={{float:"right"}}/>
+          <ProfileView style={{ float: "right" }} />
         </Grid>
       </Grid>
       <Divider />
@@ -72,6 +62,7 @@ function Profile() {
           <Typography align="center">Company</Typography>
 
           <Box style={{ marginTop: "1rem", marginLeft: "4rem" }}>
+            {/* LabelCompany component called and passed label and company details */}
             <LabelCompany
               label="Name"
               user={user.company ? user.company.name : ""}
@@ -97,6 +88,8 @@ function Profile() {
             Address:
           </Typography>
           <Box style={{ marginLeft: "70px", marginTop: "20px" }}>
+            {/* Label component called and passed label and Address details */}
+
             <Label
               label="Street"
               user={user.address ? user.address.street : ""}
@@ -112,6 +105,7 @@ function Profile() {
             />
           </Box>
           <Box>
+            {/* Included map */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23756.80816997078!2d77.58448475699774!3d12.94946521324266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15eb70e59e15%3A0xd76de165b4e08da4!2sLalbagh!5e0!3m2!1sen!2sin!4v1605070933746!5m2!1sen!2sin"
               width="500"
